@@ -100,10 +100,9 @@ class HomePage extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
-                       
                         children: [
                           Material(
                             color: Colors.grey.withOpacity(0.1),
@@ -169,6 +168,109 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(16, 10, 16, 0),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            'https://images.unsplash.com/photo-1631663170637-c2233061afac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80')),
+                    title: Text(
+                      'Jefferson Stubborn',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+                    ),
+                    subtitle: Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          size: 14,
+                          color: Colors.blue,
+                        ),
+                        Text('Santorini,Greece'),
+                      ],
+                    ),
+                  ),
+                  Image.network(
+                    'https://images.unsplash.com/photo-1628191138144-a51eeee8e2c3?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                    height: 218,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Material(
+                            color: Colors.grey.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(35),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    "9.1M",
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          FlutterImageStack(
+                            imageList: _images,
+                            showTotalCount: false,
+                            totalCount: 4,
+                            itemRadius: 35, // Radius of each images
+                            itemCount:
+                                4, // Maximum number of images to be shown in stack
+                            itemBorderWidth:
+                                2, // Border width around the images
+                          ),
+                        ],
+                      ),
+                      Material(
+                        color: Colors.grey.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(35),
+                        child: Padding(
+                          padding: EdgeInsets.all(16),
+                          child: Row(
+                            children: [
+                              Icon(
+                                CupertinoIcons.chat_bubble_fill,
+                                color: Colors.grey,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "8.3M",
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
